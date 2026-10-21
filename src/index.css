@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.8); }
+}
+
+@keyframes train-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-1px); }
+  75% { transform: translateX(1px); }
+}
+
+body {
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.game-cell {
+  transition: background-color 0.1s ease;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
